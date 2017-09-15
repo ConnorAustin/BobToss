@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212634403771346674}
   - component: {fileID: 114903562702449034}
   m_Layer: 0
-  m_Name: Rubble
+  m_Name: SplatParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 1439168874641562}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 5.57, z: 10.75}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027c142651fb245448f1aece751acde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 0
-  speed: 7
-  scaleDownSpeed: 0.4
+  gravity: -5
+  speed: 5
+  scaleDownSpeed: 0.1
   timeToDie: 2
 --- !u!212 &212634403771346674
 SpriteRenderer:
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0021eeae8d44cb64e9813c7a877601a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 869b1e5f2392b514bb6a2d22887d67f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

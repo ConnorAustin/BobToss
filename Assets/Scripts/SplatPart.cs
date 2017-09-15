@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rubble : MonoBehaviour {
+public class SplatPart : MonoBehaviour {
     public float gravity;
     public float speed;
     public float scaleDownSpeed;
@@ -24,7 +24,7 @@ public class Rubble : MonoBehaviour {
     public void SetDirection(Vector3 dir) {
         // Mess with the direction a bit
         float angle = Vector3.SignedAngle(Vector3.forward, dir, Vector3.left);
-        angle += Random.Range(-40, 40);
+        angle += Random.Range(-60, 60);
         angle *= Mathf.Deg2Rad;
         velocity = new Vector3(0, Mathf.Sin(angle), Mathf.Cos(angle));
     }

@@ -1,17 +1,18 @@
 ﻿Shader "Custom/NewSurfaceShader" {
-	Properties{
+	Properties {
 		_MainColor("Color", Color) = (1, 1, 1, 1)
 		_MainTex("Main Texture", 2D) = "" {}
 	}
-	SubShader{
-		Tags{ "RenderType" = "Opaque" }
+
+	SubShader {
+		Tags { "RenderType" = "Opaque" }
 		
 		CGPROGRAM
-#pragma surface surf Cell
-#include "UnityCG.cginc"
-#include "AutoLight.cginc"
-#include "Lighting.cginc"
-#include "UnityPBSLighting.cginc"
+		#pragma surface surf Cell
+		#include "UnityCG.cginc"
+		#include "AutoLight.cginc"
+		#include "Lighting.cginc"
+		#include "UnityPBSLighting.cginc"
 
 		fixed4 _MainColor;
 		sampler2D _MainTex;
@@ -41,11 +42,7 @@
 			return c;
 		}
 
-		
-
-
 		ENDCG
 	}
-		Fallback "Diffuse"
-
+	Fallback "Diffuse"
 }
