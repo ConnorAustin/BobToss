@@ -3,7 +3,7 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_SplatStrength ("Texture", Range(0, 1)) = 1
+		_SplatCutoff ("Splat Cutoff", Range(0, 1)) = 1
 		_Color("Color", Color) = (1, 1, 1, 1)
 	}
 
@@ -36,7 +36,7 @@
 
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
-			float _SplatStrength;
+			float _SplatCutoff;
 			float4 _Color;
 			
 			v2f vert (appdata v)
@@ -50,7 +50,13 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				fixed4 col = _Color;
-				col.a = tex2D(_MainTex, i.uv).r;
+				fixed splat = tex2D(_MainTex, i.uv).r;
+				if(splat < _SplatCutoff) {
+					col.a = 0;
+				}
+				else {
+					col.a = 1;
+				}
 				return col;
 			}
 			ENDCG

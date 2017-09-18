@@ -72,6 +72,7 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SplatCutoff: 0
     - _SplatStrength: 1
     - _SrcBlend: 1
     - _UVSec: 0
