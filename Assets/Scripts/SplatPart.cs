@@ -6,20 +6,13 @@ public class SplatPart : MonoBehaviour {
     public float gravity;
     public float speed;
     public float scaleDownSpeed;
-    public float timeToDie;
     Vector3 velocity;
 
     float scaleLerp = 0;
 
     void Start() {
-        Invoke("PleaseDie", timeToDie);
+		SetDirection ((transform.parent.position - transform.position).normalized);
     }
-
-    void PleaseDie() {
-        // okay...
-        Destroy(gameObject);
-    }
-
 
     public void SetDirection(Vector3 dir) {
         // Mess with the direction a bit

@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Splat"
+﻿Shader "Unlit/SplatExplosion"
 {
 	Properties
 	{

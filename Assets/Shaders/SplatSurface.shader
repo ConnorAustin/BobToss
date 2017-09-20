@@ -56,10 +56,10 @@
 
 				if (i.color.r > 0.2 || i.color.b > 0.2) {
 					if (i.color.r > i.color.b) {
-						col = float4(1.0, 0.2, 0.2, 1.0);
+						col = float4(0.921, 0.258, 0.349, 1.0);
 					}
 					else {
-						col = float4(0, 0.2, 1.0, 1.0);
+						col = float4(0.462, 0.392, 0.949, 1.0);
 					}
 				}
 				

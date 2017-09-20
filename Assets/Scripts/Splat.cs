@@ -5,7 +5,7 @@ using UnityEngine;
 public class Splat : MonoBehaviour {
     public float splat_dampen;
     public Color splat_color;
-    public GameObject splatParticle;
+    public GameObject splatExplosion;
 
 	// Use this for initialization
 	void Start () {
@@ -27,14 +27,9 @@ public class Splat : MonoBehaviour {
         mesh.colors = colors;
     }
 
-    void SpawnParticles(Vector3 direction) {
-        for (int i = 0; i < 5; i++)
-        {
-			var splatPart = GameObject.Instantiate(splatParticle).GetComponent<SplatPart>();
-			splatPart.SetDirection(direction);
-			splatPart.GetComponent<SpriteRenderer>().color = splat_color;
-			splatPart.transform.position = transform.position;
-        }
+    void SpawnExplosion() {
+		var explosion = GameObject.Instantiate (splatExplosion);
+		explosion.transform.position = transform.position;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -48,8 +43,6 @@ public class Splat : MonoBehaviour {
         foreach (var contactPoint in contactPoints) {
             var mesh = other.GetComponent<MeshFilter>().mesh;
             var mesh_verts = mesh.vertices;
-            if(collision.relativeVelocity.magnitude > 10)
-				SpawnParticles(collision.relativeVelocity);
 
             var mesh_colors = new Color[mesh_verts.Length];
             for (int i = 0; i < mesh_verts.Length; i++) {
@@ -68,10 +61,15 @@ public class Splat : MonoBehaviour {
                 mesh_colors[i].g = Mathf.Clamp01(mesh_colors[i].g);
                 mesh_colors[i].b = Mathf.Clamp01(mesh_colors[i].b);
                 mesh_colors[i].a = Mathf.Clamp01(mesh_colors[i].a);
-
-
             }
+
             mesh.colors = mesh_colors;
+
+			if (collision.relativeVelocity.magnitude > 10) {
+				SpawnExplosion ();
+				other.GetComponent<Rigidbody> ().AddForce (GetComponent<Rigidbody>().velocity * 100);
+				Destroy (gameObject);
+			}
         }
     }
 }
