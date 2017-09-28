@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4452032197774348}
   - component: {fileID: 114499766028067510}
+  - component: {fileID: 114347980341607048}
   m_Layer: 0
   m_Name: BlueSplatExplosion
   m_TagString: Untagged
@@ -296,6 +297,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1743620886201674}
   m_Mesh: {fileID: 4300000, guid: 0d231944eb88b0447be7e97ca5d88564, type: 3}
+--- !u!114 &114347980341607048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350274913043548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef97347dc3e3f64a8dd9a76edcfe8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDie: 2
 --- !u!114 &114461209795554322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,7 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d6ef61e9cd3cb45bd9ef5b93fa68f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDie: 1
 --- !u!114 &114630099220582926
 MonoBehaviour:
   m_ObjectHideFlags: 1

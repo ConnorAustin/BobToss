@@ -7,6 +7,10 @@ public class Brush : MonoBehaviour {
 	public Transform target;
 	public float maxAngle;
 
+	public float initalStep;
+	public int iterations;
+	public float decay;
+
 	Transform[] bones;
 	Transform tip;
 
@@ -28,14 +32,12 @@ public class Brush : MonoBehaviour {
 	}
 
 	void IK(int boneIndex) {
+		float step = initalStep;
 		if (boneIndex >= boneCount)
 			return;
 
 		Vector3 bendDirection = Vector3.right;
 
-		float step = 3.0f;
-		float decay = 0.8f;
-		const int iterations = 50;
 		Transform bone = bones [boneIndex];
 
 		float finalOrientation = 0;
@@ -80,6 +82,7 @@ public class Brush : MonoBehaviour {
 	
 	void Update () {
 		IKReset ();
-		IK (0);
+		if(target)
+			IK (0);
 	}
 }

@@ -16,10 +16,12 @@ public class Shooter : MonoBehaviour
     bool hover = false;
     GameObject curProjectile;
     Sling sling;
+	Brush brush;
 
     void Start()
     {
-        sling = transform.GetComponentInChildren<Sling>();
+		sling = transform.GetComponent<Sling>();
+		brush = transform.GetComponent<Brush> ();
     }
 
     GameObject CreateProjectile() {
@@ -43,6 +45,7 @@ public class Shooter : MonoBehaviour
         {
             curProjectile = CreateProjectile();
             sling.SlingProjectile(curProjectile);
+			brush.target = curProjectile.transform;
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -56,11 +59,13 @@ public class Shooter : MonoBehaviour
                     projectileRigidbody.AddForce(projectileToSpawn * launchForce);
                     curProjectile = null;
                     sling.FireProjectile();
+					brush.target = null;
                 }
                 else {
                     Destroy(curProjectile);
                     curProjectile = null;
                     sling.SlingProjectile(null);
+					brush.target = null;
                 }
             }
         }

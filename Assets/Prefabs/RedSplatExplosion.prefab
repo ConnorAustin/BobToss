@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4130522565797512}
   - component: {fileID: 114907672993606002}
+  - component: {fileID: 114977799025673606}
   m_Layer: 0
   m_Name: RedSplatExplosion
   m_TagString: Untagged
@@ -377,7 +378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d6ef61e9cd3cb45bd9ef5b93fa68f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDie: 1
 --- !u!114 &114947561232695544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,6 +392,18 @@ MonoBehaviour:
   gravity: -2
   speed: 7
   scaleDownSpeed: 0.01
+--- !u!114 &114977799025673606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911295765176452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef97347dc3e3f64a8dd9a76edcfe8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDie: 2
 --- !u!212 &212088280979748296
 SpriteRenderer:
   m_ObjectHideFlags: 1
