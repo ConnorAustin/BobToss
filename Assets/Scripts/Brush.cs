@@ -10,6 +10,7 @@ public class Brush : MonoBehaviour {
 	public float initalStep;
 	public int iterations;
 	public float decay;
+	public Transform jiggleBoy;
 
 	Transform[] bones;
 	Transform tip;
@@ -29,6 +30,17 @@ public class Brush : MonoBehaviour {
 	float IKReward() {
 		float dist = Mathf.Max(0.01f, Vector3.Distance (tip.position, target.position));
 		return 1.0f / dist;
+	}
+
+	public void Jiggle() {
+		target = jiggleBoy;
+		jiggleBoy.GetComponent<Animator> ().Play ("Jiggle");
+	}
+
+	public void DoneJigging() {
+		Debug.Log ("dsdsdsd");
+		if (target == jiggleBoy)
+			target = null;
 	}
 
 	void IK(int boneIndex) {
@@ -82,7 +94,7 @@ public class Brush : MonoBehaviour {
 	
 	void Update () {
 		IKReset ();
-		if(target)
+		if (target)
 			IK (0);
 	}
 }

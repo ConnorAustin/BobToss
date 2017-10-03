@@ -9,69 +9,69 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1326894051891800}
+  m_RootGameObject: {fileID: 1409956767820716}
   m_IsPrefabParent: 1
---- !u!1 &1326894051891800
+--- !u!1 &1409956767820716
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4185385666022180}
-  - component: {fileID: 212156005642291176}
-  - component: {fileID: 114266132293554958}
-  - component: {fileID: 114249704242391244}
+  - component: {fileID: 4861127171240330}
+  - component: {fileID: 212243885605220792}
+  - component: {fileID: 114683683122445712}
+  - component: {fileID: 114119791815148568}
   m_Layer: 0
-  m_Name: BluePaintDrip
+  m_Name: PaintDrip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4185385666022180
+--- !u!4 &4861127171240330
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326894051891800}
+  m_GameObject: {fileID: 1409956767820716}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.6997719, y: 12.677406, z: 5.368462}
+  m_LocalPosition: {x: 1.2413075, y: 0.53, z: 4.69}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &114249704242391244
+--- !u!114 &114119791815148568
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326894051891800}
+  m_GameObject: {fileID: 1409956767820716}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4de46cbb29c425e498a7b946c2f4cb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: 0.3
---- !u!114 &114266132293554958
+--- !u!114 &114683683122445712
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326894051891800}
+  m_GameObject: {fileID: 1409956767820716}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aef97347dc3e3f64a8dd9a76edcfe8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDie: 3
---- !u!212 &212156005642291176
+--- !u!212 &212243885605220792
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326894051891800}
+  m_GameObject: {fileID: 1409956767820716}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -99,7 +99,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 32637385733bf1f48b1460db2fb8632c, type: 3}
-  m_Color: {r: 0.4627451, g: 0.39215687, b: 0.9490196, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

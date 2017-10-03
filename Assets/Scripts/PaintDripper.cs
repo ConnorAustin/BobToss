@@ -20,6 +20,7 @@ public class PaintDripper : MonoBehaviour {
 		if (rigidBody.velocity.magnitude > velCutoff) {
 			var drip = GameObject.Instantiate (paintDrip);
 			drip.transform.position = transform.position;
+			drip.GetComponent<SpriteRenderer> ().color = GetComponent<Splat> ().color;
 		}
 	}
 }

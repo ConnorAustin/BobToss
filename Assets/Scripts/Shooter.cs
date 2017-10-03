@@ -60,6 +60,7 @@ public class Shooter : MonoBehaviour
                     curProjectile = null;
                     sling.FireProjectile();
 					brush.target = null;
+					brush.Jiggle ();
                 }
                 else {
                     Destroy(curProjectile);

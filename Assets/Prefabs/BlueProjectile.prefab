@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f05c63c1bf81ab1409b6e2b3db6862a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintDrip: {fileID: 1326894051891800, guid: 2331fd8acc5e1fc4f87139decf9c2860, type: 2}
+  paintDrip: {fileID: 1409956767820716, guid: d9ab511b5923f3049bf9107e61ee1c6e, type: 2}
 --- !u!114 &114988890477848576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,6 +269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splat_dampen: 10
   splat_color: {r: 0, g: 0, b: 1, a: 1}
+  slingMat: {fileID: 2100000, guid: cd73e363a5e903a4da66c7efcf75eac6, type: 2}
+  color: {r: 0.4627451, g: 0.39215687, b: 0.9490196, a: 1}
   splatExplosion: {fileID: 1350274913043548, guid: fec515381284e124c935f54745aa3d84,
     type: 2}
 --- !u!135 &135463963330057826

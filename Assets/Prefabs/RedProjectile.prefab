@@ -257,6 +257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splat_dampen: 10
   splat_color: {r: 1, g: 0, b: 0, a: 1}
+  slingMat: {fileID: 2100000, guid: 8fe8e1f6f90cd9e4e89cc602eb500fb2, type: 2}
+  color: {r: 0.92156863, g: 0.21568628, b: 0.34901962, a: 1}
   splatExplosion: {fileID: 1911295765176452, guid: b05b4912bbaa4724fb27e4812d32e02d,
     type: 2}
 --- !u!114 &114743645204533286

@@ -11,7 +11,7 @@ public class Sling : MonoBehaviour
 
     LineRenderer lr;
     
-    GameObject curProjectile;
+    Splat curProjectile;
 
     void Start()
     {
@@ -21,7 +21,8 @@ public class Sling : MonoBehaviour
 
     public void SlingProjectile(GameObject projectile)
     {
-        curProjectile = projectile;
+        curProjectile = projectile.GetComponent<Splat> ();
+		lr.material = curProjectile.slingMat;
     }
 
     public void FireProjectile() {
@@ -42,6 +43,7 @@ public class Sling : MonoBehaviour
 
 		var drip = GameObject.Instantiate (paintDrip);
 		drip.transform.position = dripPos;
+		drip.GetComponent<SpriteRenderer> ().color = curProjectile.color;
 	}
 
     void Update()

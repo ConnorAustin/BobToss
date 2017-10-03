@@ -5,6 +5,9 @@ using UnityEngine;
 public class Splat : MonoBehaviour {
     public float splat_dampen;
     public Color splat_color;
+	public Material slingMat;
+	public Color color;
+
     public GameObject splatExplosion;
 
 	// Use this for initialization
