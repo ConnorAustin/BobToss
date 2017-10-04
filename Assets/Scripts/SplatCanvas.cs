@@ -15,14 +15,16 @@ public class SplatCanvas : MonoBehaviour {
         mesh.colors = mesh_colors;
 	}
 
-	void Update() {
-		float actualCoverage = 0;
+    public void RecalculateCoverage() {
+        float actualCoverage = 0;
 
-		var mesh = GetComponent<MeshFilter>().mesh;
-		for(int i = 0; i < mesh.colors.Length; i++) {
-			actualCoverage += mesh.colors [i].a;
-		}
+        var mesh = GetComponent<MeshFilter>().mesh;
+        for (int i = 0; i < mesh.colors.Length; i++)
+        {
+            actualCoverage += mesh.colors[i].a;
+        }
 
-		coverage = actualCoverage / (float)mesh.colors.Length;
-	}
+        coverage = actualCoverage / (float)mesh.colors.Length;
+        GameManager.manager.RecalculateCoverage();
+    }
 }

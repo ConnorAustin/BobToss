@@ -65,10 +65,10 @@ public class Splat : MonoBehaviour {
                 mesh_colors[i].b = Mathf.Clamp01(mesh_colors[i].b);
                 mesh_colors[i].a = Mathf.Clamp01(mesh_colors[i].a);
             }
-
             mesh.colors = mesh_colors;
+            other.GetComponent<SplatCanvas>().RecalculateCoverage();
 
-			if (collision.relativeVelocity.magnitude > 10) {
+            if (collision.relativeVelocity.magnitude > 10) {
 				SpawnExplosion ();
 				other.GetComponent<Rigidbody> ().AddForce (GetComponent<Rigidbody>().velocity * 100);
 				Destroy (gameObject);

@@ -16,13 +16,21 @@ public class GameManager : MonoBehaviour {
 		var building = GameObject.Find ("Building");
 		canvases = building.GetComponentsInChildren<SplatCanvas> ();
 	}
-	
-	void Update () {
-		foreach(var sc in canvases) {
-			coverage += sc.coverage;
-		}
-		coverage /= (float)canvases.Length;
-		coverage /= desiredCoverage;
-		coverage = Mathf.Min (1, coverage);
+
+    public void RecalculateCoverage() {
+        Debug.Log("rere");
+        coverage = 0;
+
+        foreach (var sc in canvases)
+        {
+            coverage += sc.coverage;
+        }
+        coverage /= (float)canvases.Length;
+        coverage /= desiredCoverage;
+        coverage = Mathf.Min(1, coverage);
+    }
+
+    void Update () {
+	    
 	}
 }

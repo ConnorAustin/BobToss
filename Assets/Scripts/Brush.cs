@@ -6,6 +6,7 @@ public class Brush : MonoBehaviour {
 	public int boneCount;
 	public Transform target;
 	public float maxAngle;
+    public AudioClip jiggle;
 
 	public float initalStep;
 	public int iterations;
@@ -35,6 +36,7 @@ public class Brush : MonoBehaviour {
 	public void Jiggle() {
 		target = jiggleBoy;
 		jiggleBoy.GetComponent<Animator> ().Play ("Jiggle");
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(jiggle, 0.4f);
 	}
 
 	public void DoneJigging() {

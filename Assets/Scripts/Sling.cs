@@ -8,21 +8,25 @@ public class Sling : MonoBehaviour
     public float restingWidth;
 	public Transform startPoint;
 	public GameObject paintDrip;
+    public AudioClip stretch;
 
     LineRenderer lr;
     
     Splat curProjectile;
+    AudioSource audio;
 
     void Start()
     {
         lr = GetComponent<LineRenderer>();
-		Drip ();
+        audio = GetComponent<AudioSource>();
+        Drip();
     }
 
     public void SlingProjectile(GameObject projectile)
     {
         curProjectile = projectile.GetComponent<Splat> ();
 		lr.material = curProjectile.slingMat;
+        audio.PlayOneShot(stretch);
     }
 
     public void FireProjectile() {
