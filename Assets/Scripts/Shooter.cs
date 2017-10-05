@@ -58,6 +58,7 @@ public class Shooter : MonoBehaviour
                 var projectileToSpawn = spawnPoint.transform.position - curProjectile.transform.position;
                 if (projectileToSpawn.magnitude > minStretchDist)
                 {
+                    curProjectile.GetComponent<Die>().enabled = true;
                     var projectileRigidbody = curProjectile.GetComponent<Rigidbody>();
                     projectileRigidbody.isKinematic = false;
                     projectileRigidbody.AddForce(projectileToSpawn * launchForce);
@@ -66,7 +67,7 @@ public class Shooter : MonoBehaviour
 					brush.target = null;
 					brush.Jiggle ();
                     GameManager.manager.FiredBall();
-                    if (Random.value >= 0.6f) {
+                    if (Random.value >= 0.8f) {
                         var clip = rossoQuotes[Random.Range(0, rossoQuotes.Length)];
                         Camera.main.GetComponent<AudioSource>().PlayOneShot(clip);
                     }

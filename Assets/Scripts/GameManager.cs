@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
     void RestartTransition()
     {
         staticStuff.SetActive(true);
-        Invoke("Restart", 2);
+        Invoke("Restart", 0.6f);
     }
 
     void VictoryTransition() {
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour {
             if (Won())
             {
                 state = State.Won;
-                Invoke("VictoryTransition", 2);
+                Invoke("VictoryTransition", 4);
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))

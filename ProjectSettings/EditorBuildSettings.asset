@@ -17,3 +17,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: b80267ff187d2ad4e8af84c52e946d96
+  - enabled: 1
+    path: Assets/Scenes/advertisement.unity
+    guid: a18b0c268db02a84bb17a1c12bf045e6
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 025c490289c55d34ba78cb29acaadf8b
+  - enabled: 1
+    path: Assets/Scenes/advertisement2.unity
+    guid: c258dc33267550c49b14bd391a20b91c
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 3c4856ff387731441b31685d98ff1386
+  - enabled: 1
+    path: Assets/Scenes/advertisement3.unity
+    guid: 3dcbf4e665721a64094e052cc46843b9
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 45ad905f3dda1394dae768583cd7aa73
+  - enabled: 1
+    path: Assets/Scenes/end.unity
+    guid: 0cffad29be4ac0c4c9edd08b9367992b
+  - enabled: 1
+    path: Assets/Scenes/quit.unity
+    guid: ce5d366362e637e4d8d458ad9e6de8a9
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/735ed1efa6170f745b5dd80974dc4c7d
+    guid: 735ed1efa6170f745b5dd80974dc4c7d

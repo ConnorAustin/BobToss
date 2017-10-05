@@ -54,12 +54,16 @@
 				i.color.r -= splatNoise.r;
 				i.color.b -= splatNoise.b;
 
-				if (i.color.r > 0.2 || i.color.b > 0.2) {
-					if (i.color.r > i.color.b) {
+				if (i.color.r > 0.2 || i.color.b > 0.2 || i.color.g > 0.2) {
+					if (i.color.r > i.color.b && i.color.r > i.color.g) {
 						col = float4(0.921, 0.258, 0.349, 1.0);
 					}
-					else {
+					else if (i.color.b > i.color.r && i.color.b > i.color.g)
+					{
 						col = float4(0.462, 0.392, 0.949, 1.0);
+					}
+					else {
+						col = float4(0.494, 0.917, 0.419, 1.0);
 					}
 				}
 				
