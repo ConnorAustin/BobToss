@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour
 {
     public GameObject[] projectiles;
     public GameObject spawnPoint;
+    public AudioClip[] rossoQuotes;
 
     public float launchForce;
     public float minStretchDist;
@@ -31,6 +32,9 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.manager.balls == 0 || GameManager.manager.state != State.Playing)
+            return;
+
         int shooterMask = LayerMask.GetMask("Shooter");
         var cam = Camera.main;
         var origin = cam.transform.position;
@@ -61,6 +65,11 @@ public class Shooter : MonoBehaviour
                     sling.FireProjectile();
 					brush.target = null;
 					brush.Jiggle ();
+                    GameManager.manager.FiredBall();
+                    if (Random.value >= 0.6f) {
+                        var clip = rossoQuotes[Random.Range(0, rossoQuotes.Length)];
+                        Camera.main.GetComponent<AudioSource>().PlayOneShot(clip);
+                    }
                 }
                 else {
                     Destroy(curProjectile);

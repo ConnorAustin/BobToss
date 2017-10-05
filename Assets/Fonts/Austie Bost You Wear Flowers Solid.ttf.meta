@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: fc2224a319c4dd94b88af75011156039
+timeCreated: 1507170684
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Austie Bost You Wear Flowers S
+  fontNames:
+  - Austie Bost You Wear Flowers S
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

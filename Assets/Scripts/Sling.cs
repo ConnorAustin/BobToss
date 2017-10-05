@@ -24,6 +24,11 @@ public class Sling : MonoBehaviour
 
     public void SlingProjectile(GameObject projectile)
     {
+        if (projectile == null)
+        {
+            curProjectile = null;
+            return;
+        }
         curProjectile = projectile.GetComponent<Splat> ();
 		lr.material = curProjectile.slingMat;
         audio.PlayOneShot(stretch);
